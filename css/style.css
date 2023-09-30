@@ -1,0 +1,89 @@
+body{
+  background: #EEEFF3;
+  font-family: 'Gabarito', cursive;
+}
+
+header .mainLogo{
+  margin: 10px;
+  height: 100px;
+}
+.logoAndTittle{
+  display: flex;
+}
+
+header {
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    position:relative;
+    z-index: 100;
+  }
+  .webpage_title
+  {
+    color: white;
+    margin-left: 10px;
+  }
+
+  
+  nav {
+    float:inline-start
+  }
+  
+  nav ul {
+    list-style: none;
+    overflow: hidden; 
+  }
+  
+  nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover{
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+  }
+  nav ul li:hover {
+    background: #eca023;
+  }
+  nav ul .navLogo:hover {
+    background: none;
+  }
+  nav ul li button{
+    background-color: black;
+  }
+  nav ul li button:hover{
+    background: #eca023;
+  }
+  
+  body .aboutUs {
+    background-color: aquamarine;
+    display: flexbox;
+  }
+  .thirdSection {
+    background-color: #eca023;
+  }
+
+  .branches {
+    background-color: blue;
+  }
+  
+  .reviewSection{
+    background-color: brown;
+  }
+
+  .contactUs {
+    background-color: chartreuse;
+  }
+
+  .socialMedia {
+    background-color: cornflowerblue;
+  }
