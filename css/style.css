@@ -149,14 +149,16 @@ li button:hover{
   flex: 1;
   margin: 0 10px;
   background-color: darkmagenta;
+  border-radius: 5%;
+  margin: 20px;
 }
-.card h3{
+.card h2{
   text-align: center;
 }
 
 .card-center {
   flex: 1;
-  margin: 0 auto; /* Margen automático a la izquierda y derecha para centrar horizontalmente */
+  margin: 20px; /* Margen automático a la izquierda y derecha para centrar horizontalmente */
 }
 
 .reviewSection{
