@@ -5,13 +5,16 @@ body{
 }
 
 header {
-  background-image: url("../drawable/header_img.jpeg");
+  background-image: url("../drawable/WhatsApp\ Image\ 2023-10-01\ at\ 23.10.53.jpeg");
+  background-size: cover;
+  background-position: center;
   width: 100%;
   display: inherit;
-  height: 600px;
-  position:relative;
+  height: 100vh;
+  position: relative;
   z-index: 100;
 }
+
 
 .webpage_title
 {
