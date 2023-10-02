@@ -1,89 +1,218 @@
+/*This section defines the font-family for the whole website*/
 body{
   background: #EEEFF3;
   font-family: 'Gabarito', cursive;
 }
 
-header .mainLogo{
-  margin: 10px;
-  height: 100px;
-}
-.logoAndTittle{
-  display: flex;
-}
-
 header {
-    background: rgba(0,0,0,0.7);
-    width: 100%;
-    position:relative;
-    z-index: 100;
-  }
-  .webpage_title
-  {
-    color: white;
-    margin-left: 10px;
-  }
+  background-image: url("../drawable/header_img.jpeg");
+  width: 100%;
+  display: inherit;
+  height: 600px;
+  position:relative;
+  z-index: 100;
+}
 
-  
-  nav {
-    float:inline-start
-  }
-  
-  nav ul {
-    list-style: none;
-    overflow: hidden; 
-  }
-  
-  nav ul li {
-    float: left;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-  }
-  nav ul li a {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-  }
+.webpage_title
+{
+  color: black;
+  margin-left: 10px;
+}
 
-  nav ul li a:hover{
-    display: block;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-  }
-  nav ul li:hover {
-    background: #eca023;
-  }
-  nav ul .navLogo:hover {
-    background: none;
-  }
-  nav ul li button{
-    background-color: black;
-  }
-  nav ul li button:hover{
-    background: #eca023;
-  }
+ /*This section is used to define the 
+ position of the navBar*/
+.topMenuHeader{
+  display: flex;
+  justify-content: center;
+}
+
+.logoAndTittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*This section is used to crop the logo in a circle shape*/
+.mainLogo{
+  height: 100px;
+  border-radius: 100%;
+}
+
+.topNavBar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  overflow: hidden; 
   
-  body .aboutUs {
-    background-color: aquamarine;
-    display: flexbox;
-  }
-  .thirdSection {
-    background-color: #eca023;
-  }
+}
+/*
+nav {
+  align-items: center;
+}*/
+nav ul li {
+  float: left;
+  font-size: px;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
 
-  .branches {
-    background-color: blue;
-  }
-  
-  .reviewSection{
-    background-color: brown;
-  }
+nav ul li a:hover{
+  display: block;
+  color: black;
+  text-decoration: none;
+}
 
-  .contactUs {
-    background-color: chartreuse;
-  }
+nav ul .navLogo:hover {
+  background: none;
+}
+li button{
+  font-family: 'Gabarito', cursive;
+  font-size: larger;
+  background-color: transparent;
+  border: transparent;
+}
 
-  .socialMedia {
-    background-color: cornflowerblue;
-  }
+li button:hover{
+  background: #eca023;
+}
+
+.welcome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.aboutUs {
+  background-color: aquamarine;
+  display: flex;
+  vertical-align: middle;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  margin: 0%;
+}
+.auInfo {
+  background-color: cadetblue;
+  width: 50%;
+  margin-left: 10%;
+}
+.catalogSection {
+  background-color: #eca023;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalogImages {
+  background-color: chartreuse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalogImages img {
+  width: 18%;
+  height: 18%;
+  padding: 10px;
+  transition: transform 1s;
+}
+
+.catalogImages img:hover {
+  transform: scale(1.18);
+}
+
+
+.categories {
+  display: flexbox;
+  background-color: blue;
+  margin-top: 50px;
+}
+
+.reviewSection{
+  background-color: brown;
+}
+
+.contactUs {
+  background-color: chartreuse;
+}
+
+.socialMedia {
+  background-color: cornflowerblue;
+}
+
+
+/*Carrousel CSS*/
+/*
+.carousel-container {
+      width: 300px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      height: 200px;
+    }
+
+    .carousel-content {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-slide {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .carousel input[type="radio"] {
+      display: none;
+    }
+
+    .carousel input[type="radio"]:checked + .carousel-content {
+      transform: translateX(-100%);
+    }
+
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .carousel-nav label {
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .carousel input[type="radio"]:checked ~ .carousel-content {
+      transform: translateX(calc(-100% / 5));
+    }
+    
+    #slide2:checked ~ .carousel-content {
+      transform: translateX(-100% / 5);
+    }
+    
+    #slide3:checked ~ .carousel-content {
+      transform: translateX(-200% / 5);
+    }
+    
+    #slide4:checked ~ .carousel-content {
+      transform: translateX(-300% / 5);
+    }
+    
+    #slide5:checked ~ .carousel-content {
+      transform: translateX(-400% / 5);
+    }
+    */
