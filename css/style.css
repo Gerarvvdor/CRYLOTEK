@@ -126,6 +126,7 @@ li button:hover{
   height: 18%;
   padding: 10px;
   transition: transform 1s;
+  border-radius: 10%;
 }
 
 .catalogImages img:hover {
@@ -137,6 +138,25 @@ li button:hover{
   display: flexbox;
   background-color: blue;
   margin-top: 50px;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  margin: 0 10px;
+  background-color: darkmagenta;
+}
+.card h3{
+  text-align: center;
+}
+
+.card-center {
+  flex: 1;
+  margin: 0 auto; /* Margen automático a la izquierda y derecha para centrar horizontalmente */
 }
 
 .reviewSection{
