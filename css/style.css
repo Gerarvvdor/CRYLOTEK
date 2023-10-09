@@ -1,4 +1,4 @@
-/*This section defines the font-family for the whole website*/
+
 body{
   background: #EEEFF3;
   font-family: 'Gabarito', cursive;
@@ -22,12 +22,20 @@ header {
   margin-left: 10px;
 }
 
- /*This section is used to define the 
- position of the navBar*/
+
 .topMenuHeader{
   display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   justify-content: center;
+  background-color: rgba(1, 65, 161, 0.377); /* Color de fondo con poca opacidad (ajusta el último valor según tu preferencia) */
+  /* Otros estilos para .topMenuHeader */
 }
+
+.topMenuHeader * {
+  opacity: 1; /* Aplica 100% de opacidad a todo el contenido dentro de .topMenuHeader */
+}
+
 
 .logoAndTittle {
   display: flex;
@@ -36,7 +44,10 @@ header {
   align-items: center;
 }
 
-/*This section is used to crop the logo in a circle shape*/
+.welcome h1{
+  margin: 150px auto;
+}
+
 .mainLogo{
   height: 100px;
   border-radius: 100%;
@@ -49,10 +60,24 @@ header {
   overflow: hidden; 
   
 }
-/*
-nav {
+
+.topNavBar a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.welcome{
+  display: flex;
   align-items: center;
-}*/
+  justify-content: center;
+  margin: 0 auto;
+  font-size: larger;
+  color: white;
+}
+
 nav ul li {
   float: left;
   font-size: px;
@@ -66,13 +91,10 @@ nav ul li a {
 
 nav ul li a:hover{
   display: block;
-  color: black;
+  transform: scale(1.1);
   text-decoration: none;
 }
 
-nav ul .navLogo:hover {
-  background: none;
-}
 li button{
   font-family: 'Gabarito', cursive;
   font-size: larger;
@@ -81,8 +103,9 @@ li button{
 }
 
 li button:hover{
-  background: #eca023;
+  background: #013864;
 }
+
 
 .welcome{
   display: flex;
@@ -92,40 +115,65 @@ li button:hover{
 }
 
 .aboutUs {
-  background-color: aquamarine;
+  background-color: #013864;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  vertical-align: middle;
-  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 100;
+  margin: 0 auto;
+}
+
+.auInfo {
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 20px;
+}
+
+.misionVision {
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px; /* Espacio entre las columnas */
+  flex-wrap: wrap; /* Ajusta a varias filas si es necesario */
+}
+
+.misionVision div {
+  flex: 1;
   text-align: center;
-  width: auto;
-  margin: 0%;
+  max-width: 400px; /* Ancho máximo de cada columna */
 }
-.auInfo {
-  background-color: cadetblue;
-  width: 50%;
-  margin-left: 10%;
-}
+
+
 .catalogSection {
-  background-color: #eca023;
-  text-align: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 100;
   justify-content: center;
 }
 
 .catalogImages {
-  background-color: chartreuse;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .catalogImages img {
-  width: 18%;
-  height: 18%;
+  width: 40%;
+  height: 40%;
   padding: 10px;
-  transition: transform 1s;
+  transition: transform 0.5s;
   border-radius: 10%;
 }
 
@@ -135,109 +183,198 @@ li button:hover{
 
 
 .categories {
-  display: flexbox;
-  background-color: blue;
-  margin-top: 50px;
+  text-align: center;
+  display: grid;
+  gap: 40px;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 .cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  height: 90%; /* Añadimos esta línea para que todas las tarjetas tengan la misma altura */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  /* Aumentamos el tamaño de las imágenes */
+  width: 75%; /* Ajusta el tamaño según tus necesidades */
+  height: 75%; /* Ajusta el tamaño según tus necesidades */
+}
+
+.oval {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px;
+  gap: 30px;
+  width: auto; /* Dejamos que el ancho se ajuste automáticamente al contenido */
+  height: auto; /* Dejamos que la altura se ajuste automáticamente al contenido */
+  margin: 0 auto;
+  /* Centramos el contenido verticalmente */
+  display: flex;
+  align-items: center;
+  /* Centramos el contenido horizontalmente */
+  justify-content: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+
+.locationAndInfoSection {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.phisicalStore {
   display: flex;
   justify-content: space-between;
 }
 
-.card {
-  flex: 1;
-  margin: 0 10px;
-  background-color: darkmagenta;
-  border-radius: 5%;
-  margin: 20px;
-}
-.card h2{
-  text-align: center;
+.schedule, .location {
+  width: 48%;
+  text-align: left;
 }
 
-.card-center {
-  flex: 1;
-  margin: 20px; /* Margen automático a la izquierda y derecha para centrar horizontalmente */
+.schedule {
+  margin-right: 2%;
 }
 
-.reviewSection{
-  background-color: brown;
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.location-info {
+  flex: 1;
+}
+
+.location-map {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
 .contactUs {
-  background-color: chartreuse;
+  background-color: #013864;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: inherit;
+  height: 60vh;
+  position: relative;
+  z-index: 100;
 }
 
-.socialMedia {
-  background-color: cornflowerblue;
+.contactContainer {
+  background-color: blue;
+  margin: 0 auto; /* Add this line */
+  align-items: center;
+  justify-content: space-between;
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.mssg{
+  margin-bottom: 30px;
+  margin-inline: 40px;
+}
+.nne-mail{
+  margin-bottom: 30px;
+  margin-inline: 40px; 
+}
+
+.contaicner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.messageInput{
+  height: 200px;
+  width: 300px;
+}
+input{
+  height: 20px;
+  width: 300px;
 }
 
 
-/*Carrousel CSS*/
-/*
-.carousel-container {
-      width: 300px;
-    }
+footer {
+  background-color: #013864;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+}
 
-    .carousel {
-      display: flex;
-      overflow: hidden;
-      width: 100%;
-      height: 200px;
-    }
+footer button{
+  background-color: #EEEFF3;
+  color: black;
+  font-family: 'Gabarito', cursive;
+  border-color: transparent;
+  height: 30px;
+  width: 300px;
+  margin: 0 auto;
+  
+}
 
-    .carousel-content {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
+.socialMedia{
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  gap: 20px;
+  background-color: aquamarine;
+  padding: 20px;
+  
+}
 
-    .carousel-slide {
-      flex: 0 0 100%;
-      width: 100%;
-    }
+.socialMedia h2{
+  color: white;
+  font-size: 20px;
+  margin: auto;
+}
 
-    .carousel-slide img {
-      width: 100%;
-      height: auto;
-    }
+.SSMedia {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 25%;
+  height: auto;
+}
 
-    .carousel input[type="radio"] {
-      display: none;
-    }
+svg {
+  height: 10%;
+  width: 10%;
+}
 
-    .carousel input[type="radio"]:checked + .carousel-content {
-      transform: translateX(-100%);
-    }
 
-    .carousel-nav {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .carousel-nav label {
-      margin: 0 5px;
-      cursor: pointer;
-    }
-
-    .carousel input[type="radio"]:checked ~ .carousel-content {
-      transform: translateX(calc(-100% / 5));
-    }
-    
-    #slide2:checked ~ .carousel-content {
-      transform: translateX(-100% / 5);
-    }
-    
-    #slide3:checked ~ .carousel-content {
-      transform: translateX(-200% / 5);
-    }
-    
-    #slide4:checked ~ .carousel-content {
-      transform: translateX(-300% / 5);
-    }
-    
-    #slide5:checked ~ .carousel-content {
-      transform: translateX(-400% / 5);
-    }
-    */
