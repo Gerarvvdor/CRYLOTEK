@@ -13,6 +13,10 @@ body{
   font-family: 'Gabarito', cursive;
 }
 
+p{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 header {
   background-image: url("../drawable/WhatsApp\ Image\ 2023-10-01\ at\ 23.10.53.jpeg");
   background-size: cover;
@@ -23,11 +27,6 @@ header {
   position: relative;
   z-index: 100;
 }
-
-p{
-  font-family: 'Space Grotesk', sans-serif;
-}
-
 .webpage_title
 {
   color: #EEEFF3;
@@ -193,7 +192,6 @@ li button:hover{
   position: relative;
   z-index: 100;
   justify-content: center;
-  padding: 20px;
 }
 
 .catalogImages {
@@ -211,7 +209,7 @@ li button:hover{
 }
 
 .catalogImages img:hover {
-  transform: scale(1.18);
+  transform: scale(1.1);
 }
 
 hr{
@@ -243,7 +241,7 @@ hr{
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  height: 90%; 
+  height: 90%;
 }
 
 .card img {
@@ -252,8 +250,8 @@ hr{
   display: block;
   margin: 0 auto 10px;
   border-radius: 5px;
-  width: 75%; 
-  height: 75%; 
+  width: 75%;
+  height: 75%;
 }
 
 .oval {
@@ -262,14 +260,12 @@ hr{
   border-radius: 50px;
   padding: 10px;
   gap: 30px;
-  width: auto; 
-  height: auto; 
+  width: auto;
+  height: auto;
   margin: 0 auto;
   transition: transform 0.5s;
-  
   display: flex;
   align-items: center;
-  
   justify-content: center;
 }
 
@@ -281,15 +277,21 @@ hr{
   border-radius: 50px;
   padding: 10px;
   gap: 30px;
-  width: auto; 
-  height: auto; 
+  width: auto;
+  height: auto;
   margin: 0 auto;
-  
   display: flex;
   align-items: center;
-  
   justify-content: center;
 }
+
+/* Media Query para 2 cards por fila en pantallas pequeñas */
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 h2 {
   margin: 0;
