@@ -1,5 +1,4 @@
-
-:root{
+:root {
   --primary: #013864;
   --secondary: #1B4D99;
   --tertiary: #85A4C9;
@@ -8,7 +7,7 @@
   --sixth: #EEEFF3;
 }
 
-body{
+body {
   background: #EEEFF3;
   font-family: 'Gabarito', cursive;
 }
@@ -22,29 +21,29 @@ header {
   background-size: cover;
   background-position: center;
   width: 100%;
-  display: inherit;
   height: 100vh;
   position: relative;
   z-index: 100;
 }
+
+p{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 .webpage_title
 {
   color: #EEEFF3;
   margin: 0 auto;
 }
 
-
-.topMenuHeader{background-color: rgba(1, 65, 161, 0.377);
+.topMenuHeader {
+  background-color: rgba(1, 65, 161, 0.377);
   display: flex;
   justify-content: center;
-  
 }
 
-.topMenuHeader * {
-  opacity: 1;
-}
-.topMenuHeader h1{
-  padding: 20px
+.topMenuHeader h1 {
+  padding: 20px;
 }
 
 .logoAndTittle {
@@ -54,11 +53,11 @@ header {
   align-items: center;
 }
 
-.welcome h1{
+.welcome h1 {
   margin: 150px auto;
 }
 
-.mainLogo{
+.mainLogo {
   height: 100px;
   border-radius: 100%;
 }
@@ -67,11 +66,10 @@ header {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  overflow: hidden; 
-  
+  overflow: hidden;
 }
 
-.topNavBar a{
+.topNavBar a {
   display: block;
   color: white;
   text-align: center;
@@ -79,7 +77,7 @@ header {
   text-decoration: none;
 }
 
-.welcome{
+.welcome {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,6 +90,7 @@ nav ul li {
   float: left;
   font-size: px;
 }
+
 nav ul li a {
   display: block;
   padding: 10px;
@@ -99,47 +98,46 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   display: block;
   transform: scale(1.1);
   text-decoration: none;
 }
 
-li button{
+li button {
   font-family: 'Gabarito', cursive;
   font-size: larger;
   background-color: transparent;
   border: transparent;
 }
 
-li button:hover{
+li button:hover {
   background: #013864;
 }
 
-
-.welcome{
+.welcome {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
-.aboutUs{
+
+.aboutUs {
   background-color: #013864;
   color: #EEEFF3;
   text-align: center;
   margin: 0 auto;
 }
 
-.aboutUs h1{
+.aboutUs h1 {
   margin-top: 30px;
 }
 
-.aboutUs p{
+.aboutUs p {
   max-width: 100%;
   margin: 0 auto;
 }
 
-.borderTest{
+.borderTest {
   padding: 20px;
   margin: 0 auto;
   width: 60%;
@@ -149,36 +147,32 @@ li button:hover{
 
 .misionVision {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   gap: 0px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .misionVision div {
   flex: 1;
   text-align: center;
-  max-width: calc(30% + 200px); 
+  max-width: calc(30% + 200px);
   margin: 10px;
   padding: 30px;
 }
-
 
 .misionVision div lord-icon {
   scale: 0.8;
   width: 100%;
   height: auto;
   margin-top: -20px;
-  max-width: 200px; 
-  max-height: 200px; 
+  max-width: 200px;
+  max-height: 200px;
 }
-
 
 .misionVision div h2,
 .misionVision div p {
   text-align: center;
 }
-
-
 
 .catalogSection {
   background-size: cover;
@@ -212,12 +206,11 @@ li button:hover{
   transform: scale(1.1);
 }
 
-hr{
+hr {
   border: 1px solid #013864;
   width: 50%;
   margin: 0 auto;
 }
-
 
 .categories {
   text-align: center;
@@ -264,8 +257,10 @@ hr{
   height: auto;
   margin: 0 auto;
   transition: transform 0.5s;
+  
   display: flex;
   align-items: center;
+  
   justify-content: center;
 }
 
@@ -280,8 +275,10 @@ hr{
   width: auto;
   height: auto;
   margin: 0 auto;
+  
   display: flex;
   align-items: center;
+  
   justify-content: center;
 }
 
@@ -298,7 +295,6 @@ h2 {
   font-size: 18px;
 }
 
-
 .locationAndInfoSection {
   text-align: center;
   margin-bottom: 40px;
@@ -307,20 +303,22 @@ h2 {
 h1 {
   margin-top: 0;
 }
-.locationAndInfoSection{
+
+.locationAndInfoSection {
   color: #013864;
 }
 
-.locationAndInfoSection h1{
+.locationAndInfoSection h1 {
   padding: 30px;
 }
 
-.phisicalStore {
+.physicalStore {
   display: flex;
   justify-content: space-between;
 }
 
-.schedule, .location {
+.schedule,
+.location {
   width: 48%;
   text-align: left;
 }
@@ -342,7 +340,7 @@ h1 {
 }
 
 .location-map {
-  flex: 2;
+  flex:  2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -354,7 +352,6 @@ iframe {
   border-radius: 10px;
   border: #013864;
 }
-
 
 .contactUs {
   background-color: #013864;
@@ -369,11 +366,11 @@ iframe {
   z-index: 100;
 }
 
-.contactUs h1{
+.contactUs h1 {
   padding: 60px;
 }
 
-.contactUs button{
+.contactUs button {
   border: transparent;
   width: 200px;
   height: 40px;
@@ -381,13 +378,13 @@ iframe {
   transition: transform 0.5s;
 }
 
-.contactUs button:hover{
+.contactUs button:hover {
   background-color: #85A4C9;
   color: #013864;
   transform: scale(1.1);
 }
 
-.contactUs input{
+.contactUs input {
   border-radius: 20px;
   border: transparent;
 }
@@ -401,31 +398,33 @@ iframe {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin-top: -60px;
 }
-.mssg{
+
+.mssg {
   margin-bottom: 30px;
   margin-inline: 40px;
 }
-.nne-mail{
+
+.nne-mail {
   margin-bottom: 30px;
-  margin-inline: 40px; 
+  margin-inline: 40px;
 }
 
-.contaicner{
+.contaicner {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
 }
 
-.messageInput{
+.messageInput {
   height: 200px;
   width: 300px;
 }
-input{
+
+input {
   height: 20px;
   width: 300px;
 }
-
 
 footer {
   background-color: #85A4C9;
@@ -436,7 +435,7 @@ footer {
   padding: 40px;
 }
 
-footer button{
+footer button {
   background-color: #EEEFF3;
   color: black;
   font-family: 'Gabarito', cursive;
@@ -445,23 +444,22 @@ footer button{
   width: 300px;
   margin: 0 auto;
   border-radius: 100px;
-  transition: transform 0.5s;  
+  transition: transform 0.5s;
 }
 
-footer button:hover{
+footer button:hover {
   transform: scale(1.1);
   background-color: #F6DA82;
 }
 
-.socialMedia{
+.socialMedia {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 20px;
   padding: 20px;
-  
 }
 
-.socialMedia h2{
+.socialMedia h2 {
   color: white;
   font-size: 20px;
   margin: auto;
@@ -482,6 +480,3 @@ svg {
   fill: var(--primary);
 }
 
-svg:hover {
-  transform: rotate(360deg);
-}
