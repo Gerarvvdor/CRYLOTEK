@@ -353,44 +353,35 @@ iframe {
   border: #013864;
 }
 
-.contactUs {
-  background-color: #013864;
-  color: #EEEFF3;
+#contactUs {
+  padding: 20px;
+  background-color: #013864; /* Color de fondo original */
+  color: #EEEFF3; /* Color de texto original */
   text-align: center;
   background-size: cover;
   background-position: center;
-  width: 100%;
+
   display: inherit;
   height: 80vh;
   position: relative;
   z-index: 100;
 }
 
-.contactUs h1 {
+#formulario {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px; /* Radio del borde */
+  text-align: center; /* Centra el botón */
+}
+
+h1 {
   padding: 60px;
 }
 
-.contactUs button {
-  border: transparent;
-  width: 200px;
-  height: 40px;
-  border-radius: 20px;
-  transition: transform 0.5s;
-}
-
-.contactUs button:hover {
-  background-color: #85A4C9;
-  color: #013864;
-  transform: scale(1.1);
-}
-
-.contactUs input {
-  border-radius: 20px;
-  border: transparent;
-}
-
 .contactContainer {
-  margin: 0 auto; /* Add this line */
+  background-color: #013864; /* Color de fondo original */
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   width: 65%;
@@ -399,33 +390,63 @@ iframe {
   margin-top: -60px;
 }
 
-.mssg {
-  margin-bottom: 30px;
-  margin-inline: 40px;
-}
-
-.nne-mail {
-  margin-bottom: 30px;
-  margin-inline: 40px;
-}
-
-.contaicner {
+.columns {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row; /* Cambia la dirección a horizontal */
+  flex-wrap: wrap; /* Permite el ajuste en pantallas pequeñas */
+  justify-content: space-between; /* Distribuye las columnas de manera uniforme */
+}
+
+.column {
+  flex-basis: calc(50% - 10px); /* Divide en dos columnas con espacio entre ellas */
+  margin: 5px; /* Espacio entre las columnas */
+}
+
+p {
+  margin: 0;
+  font-weight: bold; /* Texto en negrita */
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 10px; /* Aumenta el relleno */
+  margin: 5px 0;
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 20px; /* Radio del borde original */
 }
 
 .messageInput {
-  height: 200px;
-  width: 300px;
+  width: 100%; /* Aumenta el ancho del cuarto input */
+  height: 100px;
 }
 
-input {
-  height: 20px;
-  width: 300px;
+button {
+  align-items: center;
+  justify-content: center;
+  width: auto; /* Ajusta al tamaño del texto dentro del botón */
+  background-color: #1B4D99; /* Color de fondo original del botón */
+  color: #EEEFF3; /* Color del texto original del botón */
+  border: transparent; /* Borde transparente */
+  border-radius: 20px; /* Radio del borde original */
+  padding: 10px; /* Aumenta el relleno del botón */
+  cursor: pointer;
+  margin: 0 auto; /* Centra el botón */
 }
 
+button:hover {
+  background-color: #85A4C9;
+  color: #013864;
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .columns {
+      flex-direction: column; /* Cambia la dirección a vertical en pantallas pequeñas */
+  }
+  .column {
+      flex-basis: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  }
+}
 footer {
   background-color: #85A4C9;
   justify-content: center;

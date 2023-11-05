@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b785e13259.js" crossorigin="anonymous"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="/js/clear.js"></script>
 </head>
 <body>
     <header>
@@ -181,22 +182,26 @@
     </section>
     <section id="contactUs">
         <div class="contactUs">
-            <h1>CONTÁCTANOS</h1>
-            <div class="contactContainer">
-                <div class="nne-mail">
-                    <p>Nombre completo</p>
-                    <input type="text" name="nameInput" id="nameID">
-                    <p>Número telefónico</p>
-                    <input type="text" name="numberInput" id="numberID">
-                    <p>E-mail</p>
-                    <input type="text" name="emailInput" id="emailID">   
+            <form id="formulario">
+                <h1>CONTÁCTANOS</h1>
+                <div class="contactContainer">
+                    <div class="columns">
+                        <div class="column">
+                            <p>Nombre completo</p>
+                            <input type="text" name="nameInput" id="nameID">
+                            <p>Número telefónico</p>
+                            <input type="text" name="numberInput" id="numberID">
+                            <p>E-mail</p>
+                            <input type="text" name="emailInput" id="emailID">
+                        </div>
+                        <div class="column">
+                            <p>Mensaje</p>
+                            <input type="text" name="message" id="messageID" class="messageInput">
+                        </div>
+                    </div>
                 </div>
-                <div class="mssg">
-                    <p>Escribe tu mensaje</p>
-                    <input type="text" name="message" id="messageID" class="messageInput">
-                </div>
-            </div>
-            <button>ENVIAR</button>
+                <button type="submit" onclick="return validar();">ENVIAR</button>
+            </form>
         </div>
     </section>
     
