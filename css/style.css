@@ -1,3 +1,4 @@
+
 :root {
   --primary: #013864;
   --secondary: #1B4D99;
@@ -6,14 +7,16 @@
   --fift: #C4A668;
   --sixth: #EEEFF3;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   background: #EEEFF3;
   font-family: 'Gabarito', cursive;
-}
-
-p{
-  font-family: 'Space Grotesk', sans-serif;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
 header {
@@ -24,10 +27,6 @@ header {
   height: 100vh;
   position: relative;
   z-index: 100;
-}
-
-p{
-  font-family: 'Space Grotesk', sans-serif;
 }
 
 .webpage_title
@@ -86,14 +85,18 @@ p{
   color: white;
 }
 
+button[id]{
+  margin-top: 10px;
+}
+
 nav ul li {
   float: left;
-  font-size: px;
+  font-size: 15px;
 }
 
 nav ul li a {
   display: block;
-  padding: 10px;
+  padding: 5px;
   color: white;
   text-decoration: none;
 }
@@ -126,6 +129,7 @@ li button:hover {
   color: #EEEFF3;
   text-align: center;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .aboutUs h1 {
@@ -235,8 +239,17 @@ hr {
   padding: 20px;
   text-align: center;
   height: 90%;
+  transition: transform 0.5s;
 }
 
+.card:hover{
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  height: 90%;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
 .card img {
   max-width: 100%;
   height: auto;
@@ -264,23 +277,6 @@ hr {
   justify-content: center;
 }
 
-.oval:hover {
-  background-color: #1B4D99;
-  transform: scale(1.1);
-  transition: transform 0.5s;
-  color: #fff;
-  border-radius: 50px;
-  padding: 10px;
-  gap: 30px;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  
-  display: flex;
-  align-items: center;
-  
-  justify-content: center;
-}
 
 /* Media Query para 2 cards por fila en pantallas pequeñas */
 @media (max-width: 768px) {
@@ -314,44 +310,40 @@ h1 {
 
 .physicalStore {
   display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
   justify-content: space-between;
 }
 
 .schedule,
 .location {
-  width: 48%;
+  width: 48%; /* Divide en dos columnas iguales */
   text-align: left;
+  padding: 10px; /* Agrega espaciado entre los elementos */
+  box-sizing: border-box; /* Incluye el relleno en el ancho */
 }
 
 .schedule {
-  margin-right: 2%;
   text-align: center;
 }
 
 .location {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.location-info {
-  flex: 1;
   text-align: center;
 }
 
 .location-map {
-  flex:  2;
+  flex: 2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 iframe {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%;
+  max-height: 400px; /* Ajusta la altura máxima para que sea responsivo */
   border-radius: 10px;
-  border: #013864;
+  border: 1px solid #013864; /* Corrige la propiedad 'border' */
 }
+
 
 #contactUs {
   padding: 20px;
@@ -420,7 +412,7 @@ input[type="text"] {
   height: 100px;
 }
 
-button {
+.send {
   align-items: center;
   justify-content: center;
   width: auto; /* Ajusta al tamaño del texto dentro del botón */
