@@ -1,0 +1,47 @@
+:root {
+    --primary: #013864;
+    --secondary: #1B4D99;
+    --tertiary: #85A4C9;
+    --quaternary: #F6DA82;
+    --fift: #C4A668;
+    --sixth: #EEEFF3;
+  }
+  .slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+}
+
+.slider .slide {
+    display: flex;
+}
+
+.slider .slide img {
+    width: 200px;
+    height: auto;
+    margin: 5px;
+}
+.slider .slide img:hover {
+    width: 200px;
+    height: auto;
+    margin: 5px;
+    transform: scale(1.05);
+}
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 18)); /* Ajusta según la cantidad de imágenes */
+        transform: translateX(calc(-200px * 18));
+    }
+}
+
