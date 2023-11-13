@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/slider.css">
-    <link rel="stylesheet" href="/css/gridModal.css">
+    <link rel="stylesheet" href="/css/categories.css">
     <script src="/js/clear.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,31 +18,23 @@
     
 </head>
 <body>
-    <header>
-        <section id="topMenuHeader">
-            <div class="topMenuHeader">   
-                <nav>
-                    <ul class="topNavBar">
-                        <li><Button><a href="#topMenuHeader" rel="#">Inicio</a></Button></li>
-                        <li><Button><a href="#aboutUs" rel="#">Sobre nosotros</a></Button></li>
-                        <li><Button><a href="#catalogSection" rel="#">Catálogo</a></li>
-                        <a href="#" rel="#" class="logoItem">
-                            <div class="logoAndTittle">
-                                <img src="/drawable/2.avif" class="mainLogo"/>
-                                <h1 class="webpage_title">CRYLOTEK.SA DE CV</h1>
-                            </div>
-                        </a>             
-                        <li><Button><a href="#categories" rel="#">CATEGORÍAS</a></Button></li>
-                        <li><Button><a href="#locationAndInfoSection" rel="#">Ubicación</a></Button></li>
-                        <li><Button><a href="#contactUs" rel="#">Contacto</a></Button></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="welcome">
-                <h1>SOLUCIONES CREATIVAS PARA MENTES INGENIOSAS</h1>
-            </div>
-        </section>
-    </header>
+    <section id="topMenuHeader">
+        <div class="topMenuHeader">
+            <nav class="navito" id="navbar">
+                <ul>
+                    <li><a href="#topMenuHeader" rel="#">Inicio</a></li>
+                    <li><a href="#aboutUs" rel="#">Sobre nosotros</a></li>
+                    <li><a href="#catalogSection" rel="#">Catálogo</a></li>
+                    <li><a href="#categories" rel="#">Categorías</a></li>
+                    <li><a href="#locationAndInfoSection" rel="#">Ubicación</a></li>
+                    <li><a href="#contactUs" rel="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="welcome">
+            <h1>SOLUCIONES CREATIVAS PARA MENTES INGENIOSAS</h1>
+        </div>
+    </section>
     <section id="aboutUs">
         <div class="aboutUs">
             <div class="borderTest">
@@ -140,79 +132,207 @@
         <div class="categories">
             <h1>NUESTRAS CATEGORÍAS</h1>
             <div class="cardsContainer">
-                <div class="card">
-                    <img src="/drawable/Industrial.jpeg" alt="Industrial">
-                    <button class="oval" id="openGridModalBtn">Industrial</button>
-                </div>
-                <!-- El Nuevo Modal con Grid -->
-                <div id="gridModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" id="closeGridModalBtn">&times;</span>
-                        <h2 class="modal-title">Título del Modal con Grid</h2>
-                        <div class="grid-container">
-                        <!-- Celdas del Grid -->
-                        <div class="grid-item">
-                            <div class="card">
-                            <img src="/drawable/Industrial.jpeg" alt="Industrial">
-                            <p>Contenido relacionado con la categoría "Industrial"</p>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="card">
-                            <img src="/drawable/Reconocimientos.jpeg" alt="Reconocimientos">
-                            <p>Contenido relacionado con la categoría "Reconocimientos"</p>
-                            </div>
-                        </div>
-                        <!-- Agrega más celdas según sea necesario -->
-                        </div>
-                    </div>
-                    </div>
 
-                    <script src="/js/script_modal_grid.js"></script>
                 <div class="card">
-                    <img src="/drawable/Reconocimientos.jpeg" alt="Reconocimientos">
-                    <button class="oval">
-                        <h2>Reconocimientos</h2>
+                    <img src="/drawable/Industrial.jpeg" alt="Industrial" class="openModal" data-modal="gridModal1">
+                    <button class="openModal" data-modal="gridModal1">
+                        Industrial
                     </button>
                 </div>
+                <div class="modal" id="gridModal1">
+                    <div class="grid-modal-content">
+                        <span class="close-grid-modal" data-modal="gridModal1">&times;</span>
+                        <h2 class="modal-title">Industrial</h2>
+                        <div class="grid-container">
+                            <!-- Columnas del modal -->
+                            <div class="grid-column">
+                                <h2>Pieza de maquinaria</h2>
+                                <img src="/drawable/maquinaria.jpeg" alt="Imagen 1">
+                            </div>
+                            <!-- Puedes agregar más columnas según sea necesario -->
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="card">
-                    <img src="/drawable/Oficina.jpeg" alt="Oficina">
-                    <button class="oval">
+                    <img src="/drawable/Reconocimientos.jpeg" alt="Reconocimientos" class="openModal" data-modal="gridModal2">
+                    <button class="openModal" data-modal="gridModal2">
+                        Reconocimientos
+                    </button>
+                </div>
+                <div class="modal" id="gridModal2">
+                    <div class="grid-modal-content">
+                        <span class="close-grid-modal" data-modal="gridModal2">&times;</span>
+                        <h2 class="modal-title">Reconocimientos</h2>
+                        <div class="grid-container">
+                            <!-- Columnas del modal -->
+                            <div class="grid-column">
+                                <h2>Trofeos de Reconocimiento</h2>
+                                <img src="/drawable/trofeos.jpg" alt="Imagen 4">
+                            </div>
+                            <!-- Puedes agregar más columnas según sea necesario -->
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="/drawable/Oficina.jpeg" alt="Oficina" class="openModal" data-modal="gridModal3">
+                    <button class="openModal" data-modal="gridModal3">
                         <h2>Oficina</h2>
                     </button>
                 </div>
+                <div class="modal" id="gridModal3">
+                    <div class="grid-modal-content">
+                        <span class="close-grid-modal" data-modal="gridModal3">&times;</span>
+                        <h2 class="modal-title">Oficina</h2>
+                        <div class="grid-container">
+                            <!-- Columnas del modal -->
+                            <div class="grid-column">
+                                <h2>Mamparas</h2>
+                                <img src="/drawable/mamparas.jpg" alt="Imagen 4">
+                            </div>
+                            <div class="grid-column">
+                                <h2>Archiveros</h2>
+                                <img src="/drawable/archivero.jpg" alt="Imagen 5">
+                            </div>
+                            <!-- Puedes agregar más columnas según sea necesario -->
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card">
-                    <img src="/drawable/propagandas.jpeg" alt="Publicitario">
-                    <button class="oval">
+                    <img src="/drawable/propagandas.jpeg" alt="Publicitario"  class="openModal" data-modal="gridModal4">
+                    <button class="openModal" data-modal="gridModal4">
                         <h2>Publicitario</h2>
                     </button>
+                </div>
+                <div class="modal" id="gridModal4">
+                    <div class="grid-modal-content">
+                        <span class="close-grid-modal" data-modal="gridModal4">&times;</span>
+                        <h2 class="modal-title">Publicitario</h2>
+                        <div class="grid-container">
+                            <!-- Columnas del modal -->
+                            <div class="grid-column">
+                                <h2>Vinil troquelado</h2>
+                                <img src="/drawable/viniles.jpeg" alt="Imagen 4">
+                            </div>
+                            <div class="grid-column">
+                                <h2>Exhibidores</h2>
+                                <img src="/drawable/exibidores1.jpeg" alt="Imagen 5">
+                                <img src="/drawable/exibidores2.jpeg" alt="Imagen 5">
+                            </div>
+                            <!-- Puedes agregar más columnas según sea necesario -->
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="cardsContainer">
                 <div class="card">
-                    <img src="/drawable/Regalos.jpeg" alt="Regalos">
-                    <button class="oval">
+                    <img src="/drawable/Regalos.jpeg" alt="Regalos" class="openModal" data-modal="gridModal5">
+                    <button class="openModal" data-modal="gridModal5">
                         <h2>Regalos</h2>
                     </button>
                 </div>
+                <div class="modal" id="gridModal5">
+                    <div class="grid-modal-content">
+                        <span class="close-grid-modal" data-modal="gridModal5">&times;</span>
+                        <h2 class="modal-title">Regalos</h2>
+                        <div class="grid-container">
+                            <!-- Columnas del modal -->
+                            <div class="grid-column">
+                                <h2>Tazas</h2>
+                                <img src="/drawable/tazas.jpeg" alt="Imagen 4">
+                            </div>
+                            <div class="grid-column">
+                                <h2>Joyeros</h2>
+                                <img src="/drawable/joyeros.jpg" alt="Imagen 4">
+                            </div>
+                            <div class="grid-column">
+                                <h2>Juegos de mesa</h2>
+                                <img src="/drawable/juego de mesa.jpg" alt="Imagen 4">
+                                <img src="/drawable/conect4.jpg" alt="Imagen 4">
+                            </div>
+                            <!-- Puedes agregar más columnas según sea necesario -->
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card">
-                    <img src="/drawable/Promocionales.jpeg" alt="Promocionales">
-                    <button class="oval">
+                    <img src="/drawable/Promocionales.jpeg" alt="Promocionales" class="openModal" data-modal="gridModal6">
+                    <button class="openModal" data-modal="gridModal6">
                         <h2>Promocionales</h2>
                     </button>
                 </div>
+                <div class="modal" id="gridModal6">
+                    <div class="grid-modal-content">
+                        <span class="close-grid-modal" data-modal="gridModal6">&times;</span>
+                        <h2 class="modal-title">Promocionales</h2>
+                        <div class="grid-container">
+                            <!-- Columnas del modal -->
+                            <div class="grid-column">
+                                <h2>Camissas sublimadas</h2>
+                                <img src="/drawable/camisetas.jpeg" alt="Imagen 4">
+                            </div>
+                            <div class="grid-column">
+                                <h2>Termos</h2>
+                                <img src="/drawable/termos.jpeg" alt="Imagen 5">
+                            </div>
+                            <div class="grid-column">
+                                <h2>Llaveros</h2>
+                                <img src="/drawable/llaveros.jpg" alt="Imagen 5">
+                            </div>
+                            <!-- Puedes agregar más columnas según sea necesario -->
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card">
-                    <img src="/drawable/Ornamentales.jpeg" alt="Ornamentales">
-                    <button class="oval">
+                    <img src="/drawable/Ornamentales.jpeg" alt="Ornamentales" class="openModal" data-modal="gridModal7">
+                    <button class="openModal" data-modal="gridModal7">
                         <h2>Ornamentales</h2>
                     </button>
                 </div>
+                <div class="modal" id="gridModal7">
+                    <div class="grid-modal-content">
+                        <span class="close-grid-modal" data-modal="gridModal7">&times;</span>
+                        <h2 class="modal-title">Ornamentales</h2>
+                        <div class="grid-container">
+                            <!-- Columnas del modal -->
+                            <div class="grid-column">
+                                <h2>Estantes de pared</h2>
+                                <img src="/drawable/estantes de pared.jpg" alt="Imagen 4">
+                                <img src="/drawable/estantes de pared2.jpg" alt="Imagen 4">
+                            </div>
+                            <div class="grid-column">
+                                <h2>Cascos de iluminación</h2>
+                                <img src="/drawable/lamparas.jpg" alt="Imagen 4">
+                            </div>
+                            <!-- Puedes agregar más columnas según sea necesario -->
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card">
-                    <img src="/drawable/Rotulación.jpeg" alt="Rotulación">
-                    <button class="oval">
+                    <img src="/drawable/Rotulación.jpeg" alt="Rotulación" class="openModal" data-modal="gridModal8">
+                    <button class="openModal" data-modal="gridModal8">
                         <h2>Rotulación</h2>
                     </button>
                 </div>
+                <div class="modal" id="gridModal8">
+                    <div class="grid-modal-content">
+                        <span class="close-grid-modal" data-modal="gridModal8">&times;</span>
+                        <h2 class="modal-title">Rotulación</h2>
+                        <div class="grid-container">
+                            <!-- Columnas del modal -->
+                            <div class="grid-column">
+                                <h2>Señalética en acrílico</h2>
+                                <img src="/drawable/señales.jpg" alt="Imagen 4">
+                            </div>
+                            <!-- Puedes agregar más columnas según sea necesario -->
+                        </div>
+                    </div>
+                </div>
+                <script src="/js/script_modal_grid.js"></script>
             </div> 
             <i><!--Aquí debe ir un ícono--></i>
         </div>

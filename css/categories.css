@@ -1,3 +1,11 @@
+:root {
+  --primary: #013864;
+  --secondary: #1B4D99;
+  --tertiary: #85A4C9;
+  --quaternary: #F6DA82;
+  --fift: #C4A668;
+  --sixth: #EEEFF3;
+}
 body {
   background: #EEEFF3;
   font-family: 'Gabarito', cursive;
@@ -6,59 +14,75 @@ body {
   min-height: 100vh;
   margin: 0;
 }
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
+
+
+.div[id="modal"] {
+  color: #013864;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: min-content;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
   
-  .modal-content {
-    background-color: #fff;
+  
+}
+
+.grid-modal-content {
+  background-color: #EEEFF3;
+    margin: 15% auto;
     padding: 20px;
-    border-radius: 10px;
+    border: 1px solid #888;
+    width: auto;
+    max-width: 50%;
     position: relative;
-  }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  /* Grid */
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-  
-  .grid-item {
     text-align: center;
-  }
+    border-radius: 40px;
+}
+
+.modal-title{
+  margin-bottom: 30px;
   
-  /* Tarjeta */
-  .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
+  font-size: 30px;
+}
+.close-grid-modal {
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.grid-container {
+
+  display: flex;
+  flex-direction: row; /* Cambiado a row para alinear de izquierda a derecha */
+  justify-content: space-between;
+}
+
+.grid-column {
+  flex: 1;
+  text-align: center;
+}
+.grid-column img{
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.grid-column h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+/* Estilo para dispositivos pequeños */
+@media screen and (max-width: 600px) {
+  .grid-container {
+      flex-direction: column; /* Cambiado a column para dispositivos pequeños */
   }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Estilo para dispositivos pequeños */
-  @media screen and (max-width: 600px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-  }
+}

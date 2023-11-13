@@ -19,56 +19,27 @@ body {
   margin: 0;
 }
 
-header {
-  background-image: url("../drawable/WhatsApp\ Image\ 2023-10-01\ at\ 23.10.53.jpeg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: 100;
-}
-
-.webpage_title
-{
-  color: #EEEFF3;
-  margin: 0 auto;
-}
-
-.topMenuHeader {
-  background-color: rgba(1, 65, 161, 0.377);
+/* Estilos de la barra de navegación */
+.navito {
+  background-color: #013864;
   display: flex;
-  justify-content: center;
-}
-
-.topMenuHeader h1 {
-  padding: 20px;
-}
-
-.logoAndTittle {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 80%;
 }
 
-.welcome h1 {
-  margin: 150px auto;
-}
-
-.mainLogo {
-  height: 100px;
-  border-radius: 100%;
-}
-
-.topNavBar {
-  display: flex;
-  justify-content: space-between;
+.navito ul {
   list-style: none;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-.topNavBar a {
+.navito li {
+  margin-right: 20px;
+}
+
+.navito a {
   display: block;
   color: white;
   text-align: center;
@@ -76,19 +47,45 @@ header {
   text-decoration: none;
 }
 
-.welcome {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.navito a:hover {
+  background-color: #85A4C9;
+  color: black;
+}
+
+/* Estilos del título de la página */
+.welcome{
+  background-image: url("../drawable/WhatsApp\ Image\ 2023-10-01\ at\ 23.10.53.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+}
+.welcome h1 {
+  color: #EEEFF3;
   margin: 0 auto;
-  font-size: larger;
-  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-button[id]{
-  margin-top: 10px;
-}
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 600px) {
+  .navito ul {
+      flex-direction: column;
+  }
 
+  .navito li {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+  }
+
+  .navito a {
+      padding: 10px;
+  }
+}
 nav ul li {
   float: left;
   font-size: 15px;
@@ -139,6 +136,9 @@ li button:hover {
 .aboutUs p {
   max-width: 100%;
   margin: 0 auto;
+}
+button[id]{
+  margin-top: 10px;
 }
 
 .borderTest {
@@ -260,7 +260,10 @@ hr {
   height: 75%;
 }
 
-.oval {
+.categories button{
+  font-family: 'Gabarito', cursive;
+  border: transparent;
+  font-size:  20px;
   background-color: #85A4C9;
   color: #fff;
   border-radius: 50px;
@@ -270,10 +273,8 @@ hr {
   height: auto;
   margin: 0 auto;
   transition: transform 0.5s;
-  
   display: flex;
   align-items: center;
-  
   justify-content: center;
 }
 
