@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/slider.css">
+    <link rel="stylesheet" href="/css/gridModal.css">
     <script src="/js/clear.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,58 +142,82 @@
             <div class="cardsContainer">
                 <div class="card">
                     <img src="/drawable/Industrial.jpeg" alt="Industrial">
-                    <div class="oval">
-                        <h2>Industrial</h2>
-                    </div>
+                    <button class="oval" id="openGridModalBtn">Industrial</button>
                 </div>
+                <!-- El Nuevo Modal con Grid -->
+                <div id="gridModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeGridModalBtn">&times;</span>
+                        <h2 class="modal-title">Título del Modal con Grid</h2>
+                        <div class="grid-container">
+                        <!-- Celdas del Grid -->
+                        <div class="grid-item">
+                            <div class="card">
+                            <img src="/drawable/Industrial.jpeg" alt="Industrial">
+                            <p>Contenido relacionado con la categoría "Industrial"</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="card">
+                            <img src="/drawable/Reconocimientos.jpeg" alt="Reconocimientos">
+                            <p>Contenido relacionado con la categoría "Reconocimientos"</p>
+                            </div>
+                        </div>
+                        <!-- Agrega más celdas según sea necesario -->
+                        </div>
+                    </div>
+                    </div>
+
+                    <script src="/js/script_modal_grid.js"></script>
                 <div class="card">
                     <img src="/drawable/Reconocimientos.jpeg" alt="Reconocimientos">
-                    <div class="oval">
+                    <button class="oval">
                         <h2>Reconocimientos</h2>
-                    </div>
+                    </button>
                 </div>
                 <div class="card">
                     <img src="/drawable/Oficina.jpeg" alt="Oficina">
-                    <div class="oval">
+                    <button class="oval">
                         <h2>Oficina</h2>
-                    </div>
+                    </button>
                 </div>
                 <div class="card">
                     <img src="/drawable/propagandas.jpeg" alt="Publicitario">
-                    <div class="oval">
+                    <button class="oval">
                         <h2>Publicitario</h2>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div class="cardsContainer">
                 <div class="card">
                     <img src="/drawable/Regalos.jpeg" alt="Regalos">
-                    <div class="oval">
+                    <button class="oval">
                         <h2>Regalos</h2>
-                    </div>
+                    </button>
                 </div>
                 <div class="card">
                     <img src="/drawable/Promocionales.jpeg" alt="Promocionales">
-                    <div class="oval">
+                    <button class="oval">
                         <h2>Promocionales</h2>
-                    </div>
+                    </button>
                 </div>
                 <div class="card">
                     <img src="/drawable/Ornamentales.jpeg" alt="Ornamentales">
-                    <div class="oval">
+                    <button class="oval">
                         <h2>Ornamentales</h2>
-                    </div>
+                    </button>
                 </div>
                 <div class="card">
                     <img src="/drawable/Rotulación.jpeg" alt="Rotulación">
-                    <div class="oval">
+                    <button class="oval">
                         <h2>Rotulación</h2>
-                    </div>
+                    </button>
                 </div>
             </div> 
             <i><!--Aquí debe ir un ícono--></i>
         </div>
     </section>
+    
     <hr></hr>
     <section id="locationAndInfoSection">
         <div class="locationAndInfoSection">
